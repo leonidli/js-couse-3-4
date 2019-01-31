@@ -1,0 +1,16 @@
+.doge-image {
+    width: 300px;
+    padding: 20px;
+}
+
+.dogo-subscribe {
+    position: relative;
+    height: 200px;
+}
+
+.dogo-subscribe-button {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
