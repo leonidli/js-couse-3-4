@@ -1,7 +1,42 @@
+.container {
+    display: block;
+    width: 100px;
+    min-width: 300px;
+    height: 3000px;
+    background: yellow;
+}
+
 .display-test-inline {
-    display: inline;
+    display: inline-block;
 }
 
 .display-test-block {
-   display: block;
+   display: inline-block;
+}
+.relative-parent {
+    margin: 50px;
+    position: relative;
+}
+
+.half-container {
+    position: fixed;
+    bottom:0;
+    right:0;
+    top:0;
+    left:0;
+    
+    margin: auto;
+
+    height: 100px;
+    width: 100px;
+    background: red;
+}
+
+.element {
+    margin: 30px;
+    padding: 30px;
+    width: 70%;
+    min-width: 300px;
+    background: green;
+    border: 20px blue solid;
 }

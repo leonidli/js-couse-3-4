@@ -6,13 +6,13 @@
 
 
     var isBig = false;
-    setInterval(function(){
+    setTimeout(function(){
         if (isBig){
             firstDiv.className = ""
         } else {
             firstDiv.className = "huge-label red-border"
         }
-        
+
         isBig = !isBig;
     }, 1000);
 })();
