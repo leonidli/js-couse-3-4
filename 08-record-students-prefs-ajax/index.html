@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+</head>
+
+<body>
+
+    <script>
+        function createElement(name){
+            const body = document.querySelector('body');
+            var node = document.createElement("h2");       
+            var textnode = document.createTextNode(name);
+            body.appendChild(textnode)
+        }
+
+        +function(){
+            var pref = {
+                name : 'Artem',
+                technologies: ['Scala', 'TS', 'Ruby', 'Python', 'Js']
+            }
+
+            fetch('http://localhost:3000/preferences', {
+                method: 'post',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(pref),
+                mode: 'cors'
+            }).then(function(response) {
+                console.log('Response:', response);
+            })
+            .then(data => {
+               // createElement(data['Artem'].name)
+            }).catch(function(error) {
+                console.error('Error', response);
+            });
+        }()
+      
+    </script>
+</body>
+
+</html>
