@@ -11,7 +11,7 @@
     <script>
         function createElement(name){
             const body = document.querySelector('body');
-            var node = document.createElement("h2");       
+            var node = document.createElement("h2");                 // Create a <li> node
             var textnode = document.createTextNode(name);
             body.appendChild(textnode)
         }
@@ -32,9 +32,15 @@
                 mode: 'cors'
             }).then(function(response) {
                 console.log('Response:', response);
-            })
-            .then(data => {
-               // createElement(data['Artem'].name)
+
+                return fetch('http://localhost:3000/preferences', {
+                    method: 'get',
+                    mode: 'cors'
+                })
+            }).then(response => {
+                return response.json()
+            }).then(data => {
+                createElement(data['Artem'].name)
             }).catch(function(error) {
                 console.error('Error', response);
             });
